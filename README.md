@@ -1,2 +1,2 @@
-# encryptrinb4.github.io
+# encryptr.github.io
 Discord Regional Indicator Script ( HTML )
