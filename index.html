@@ -395,18 +395,7 @@ Founded by Inb4, EncryptrInb4 provides reliable service and fun. Programmed with
 			ga('send', 'pageview');
 			var copyTextareaBtn = document.querySelector('.js-textareacopybtn');
 
-copyTextareaBtn.addEventListener('click', function(event) {
-  var copyTextarea = document.querySelector('.js-copytextarea');
-  copyTextarea.select();
 
-  try {
-    var successful = document.execCommand('textOutput');
-    var msg = successful ? 'successful' : 'unsuccessful';
-    console.log('Copying text command was ' + msg);
-  } catch (err) {
-    console.log('Oops, unable to copy');
-  }
-});
 		</script>
 		</div>
 							
