@@ -1,2 +1,2 @@
-# encryptr.github.io
+# discryptr.github.io
 Discord Regional Indicator Script ( HTML )
