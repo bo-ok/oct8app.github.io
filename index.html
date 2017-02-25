@@ -43,6 +43,17 @@
 						<textarea class=form-control id=textOutput onclick=this.focus(),this.select() placeholder=":regional_indicator_h: :regional_indicator_i: :regional_indicator_n: :regional_indicator_b: :four: " readonly rows=10 style=max-width:100%></textarea>
 
 					</div>
+					<button id='markup-copy'>Copy Button</button>
+<script>
+    document.getElementById('markup-copy').addEventListener('click', function() {
+        clipboard.copy({
+            'text/plain': 'textOutput',
+            'text/html': 'textOutput'
+        }).then(
+            function(){console.log('success'); },
+            function(err){console.log('failure', err);
+        });
+    });
 					<span class="label label-info">v2.2b</span>
 				</div>
 			</div>
