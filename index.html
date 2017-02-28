@@ -44,8 +44,6 @@
 					<center><b>Discryptr</b> is a revolutionary <b>Discord</b> text to regional indicator converter. It efficiently converts text to regional indicators and is tenfold times faster than other converters. Just enter your text and copy the converted text with ease.
 						<br>
 						<br> Founded by <b>Inb4</b>, <b>Discryptr</b> provides reliable service and fun. Programmed with HTML, Javascript, CSS and powered by our amazing developers, <b>Inb4</b> and <b>Hexsphere</b>.
-						</div>
-						<div class="g-recaptcha" data-sitekey="6Lf0HRcUAAAAALWY9Y_So5ENlqH0YknjzUrw2W7K"></div>
 						
 						<script type="text/javascript">
 							var defaultDiacriticsRemovalMap = [{
@@ -386,6 +384,44 @@
 							ga('create', 'UA-47210110-7', 'auto');
 							ga('send', 'pageview');
 							var copyTextareaBtn = document.querySelector('.js-textareacopybtn');
+							function get_ip_address() {
+  // check for shared internet/ISP IP
+  if (!empty($_SERVER['HTTP_CLIENT_IP']) && $this->validate_ip($_SERVER['HTTP_CLIENT_IP']))
+   return $_SERVER['HTTP_CLIENT_IP'];
+
+  // check for IPs passing through proxies
+  if (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+   // check if multiple ips exist in var
+    $iplist = explode(',', $_SERVER['HTTP_X_FORWARDED_FOR']);
+    foreach ($iplist as $ip) {
+     if ($this->validate_ip($ip))
+      return $ip;
+    }
+   }
+
+  if (!empty($_SERVER['HTTP_X_FORWARDED']) && $this->validate_ip($_SERVER['HTTP_X_FORWARDED']))
+   return $_SERVER['HTTP_X_FORWARDED'];
+  if (!empty($_SERVER['HTTP_X_CLUSTER_CLIENT_IP']) && $this->validate_ip($_SERVER['HTTP_X_CLUSTER_CLIENT_IP']))
+   return $_SERVER['HTTP_X_CLUSTER_CLIENT_IP'];
+  if (!empty($_SERVER['HTTP_FORWARDED_FOR']) && $this->validate_ip($_SERVER['HTTP_FORWARDED_FOR']))
+   return $_SERVER['HTTP_FORWARDED_FOR'];
+  if (!empty($_SERVER['HTTP_FORWARDED']) && $this->validate_ip($_SERVER['HTTP_FORWARDED']))
+   return $_SERVER['HTTP_FORWARDED'];
+
+  // return unreliable ip since all else failed
+  return $_SERVER['REMOTE_ADDR'];
+ }
+
+function validate_ip($ip) {
+     if (filter_var($ip, FILTER_VALIDATE_IP, 
+                         FILTER_FLAG_IPV4 | 
+                         FILTER_FLAG_IPV6 |
+                         FILTER_FLAG_NO_PRIV_RANGE | 
+                         FILTER_FLAG_NO_RES_RANGE) === false)
+         return false;
+     self::$ip = $ip;
+     return true;
+ }
 						</script>
 				</div>
 
