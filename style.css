@@ -1,0 +1,159 @@
+h1, h2, h3, p, div {
+    font-family: "Roboto", "Arial", Times, sans-serif;
+    text-align: center;
+}
+
+body {
+    background-color: #f9f9f9;
+}
+
+.center {
+    margin: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    padding: 30px;
+    padding-top: 5px;
+    padding-bottom: 60px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 2px 6px #888888;
+}
+
+.layout.horizontal.top {
+    justify-content: center;
+}
+
+.layout.horizontal.mid {
+    padding-top: 8%;
+    padding-bottom: 8%;
+}
+
+.layout.horizontal.preview {
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 2px 6px #888888;
+}
+
+p.grey {
+    color: rgb(128, 128, 128);
+    margin-top: 8px;
+}
+
+.white {
+    color: #f9f9f9;
+}
+
+p.tips {
+    position: relative;
+    width: 100%;
+    color: rgb(150, 150, 150);
+    font-size: 15px;
+}
+
+p.rainbowTip {
+    background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.05, #f2f), color-stop(0.1, #22f), color-stop(0.15, #2ff), color-stop(0.2, #2f2),color-stop(0.25, #2f2), color-stop(0.3, #ff2), color-stop(0.35, #f22), color-stop(0.4, #f22), color-stop(0.45, #f2f), color-stop(0.5, #22f), color-stop(0.55, #2ff), color-stop(0.6, #2f2),color-stop(0.65, #2f2), color-stop(0.7, #ff2), color-stop(0.75, #f22), color-stop(0.8, #f22), color-stop(0.85, #f2f), color-stop(0.9, #22f), color-stop(0.95, #2ff), color-stop(1, #2f2));
+    font-size: 18px;
+    color:transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+img.github {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    max-width: 100px;
+}
+
+img.title {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 20px;
+    width: 80%;
+    max-width: 500px;
+}
+
+iron-icon.discordimg {
+    width: auto;
+    height: auto;
+}
+
+paper-button.discord {
+    background-color: rgb(59, 136, 194);
+    color: white;
+    padding-top: 2%;
+    padding-left: 5px;
+    padding-right: 7px;
+    padding-bottom: 1px;
+}
+
+paper-button.copy {
+    background-color: rgb(59, 136, 194);
+    float: left;
+    color: white;
+    padding: 5px;
+}
+
+paper-button.bug {
+    position: fixed;
+    bottom: 5px;
+    color: rgb(150, 150, 150);
+    font-size: 12px;
+}
+
+paper-checkbox.cap {
+    border: 5px;
+    border-radius: 5px;
+    box-shadow: 0px 1px 3px #888888;
+    align-self: center;
+    padding: 6px;
+    margin-left: 0px;
+    margin-top: 16px;
+    margin-left: 5px;
+}
+
+paper-input.flex {
+    --paper-input-container-label: flex;
+}
+
+paper-textarea.input {
+}
+
+/* css for mobile */
+@media (max-width: 600px) {
+    img.github {
+        position: absolute;
+        max-width: 85px;
+        top: auto;
+        bottom: 0px;
+        content: url("../../images/githubMobile.png");
+    }
+
+    paper-button.discord {
+        top: 7%;
+        max-width: 80px;
+        max-height: 40px;
+    }
+
+    paper-input.output {
+        padding-bottom: 4%;
+    }
+
+    img.title {
+        margin-left: 5;
+        max-width: 300px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .center {
+        width: 80%;
+    }
+}
