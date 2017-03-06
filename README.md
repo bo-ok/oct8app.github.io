@@ -1,2 +1,2 @@
-# discryptr.github.io
-Discord Regional Indicator Script ( HTML )
+# barreler.github.io
+Created By Inb4 and Hexsphere
