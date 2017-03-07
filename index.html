@@ -10,6 +10,8 @@
 	<meta name="theme-color" content="#ffffff">
 	<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/press-start-2p" type="text/css"/>
 	<font color="#2C2239" face="PressStart2PRegular">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
 	<title>Bᴀʀoʟᴇ</title>
 		
 </head>
@@ -47,6 +49,11 @@ transition: all 0.3s ease-in-out 0s;
 					<div class=form-group>
 						<label for=textOutput>Encrypted Output</label>
 						<textarea class=form-control id=textOutput onclick=this.focus(),this.select() placeholder=":regional_indicator_i: :regional_indicator_n: :regional_indicator_b: :four: " readonly rows=10 style=max-width:100%></textarea>
+<center>
+<p id="textOutput">textOutput</p>
+
+
+<button onclick="copyToClipboard('#textOutput')">Copy</button>
 
 					</div>
 					
