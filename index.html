@@ -396,6 +396,15 @@ transition: all 0.3s ease-in-out 0s;
 							ga('create', 'UA-47210110-7', 'auto');
 							ga('send', 'pageview');
 							var copyTextareaBtn = document.querySelector('.js-textareacopybtn');
+							
+							function copyToClipboard(element) {
+  var $temp = $("textOutput");
+  $("body").append($temp);
+  $temp.val($(element).text()).select();
+  document.execCommand("copy");
+  $temp.remove();
+}
+
 						</script>
 				</div>
 
