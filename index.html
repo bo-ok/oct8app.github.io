@@ -30,28 +30,42 @@ div { font-family: 'pressStart2P', sans-serif; }
 
 span { font-weight: bold; }
 		
-		body {
-			@keyframes sunbeams {
-   0% {
-      transform:translateY(40%) rotate(0deg);
-   }
-   50% {
-      transform:translateY(-40%) rotate(180deg);
-   }
-   100% {
-      transform:translateY(40%) rotate(360deg);
-   }
-   0%,14%,17%,43%,53%,71%,80%,94%,100% {
-      opacity:0;
-   }
-   6%,15%,24%,28%,48%,55%,78%,82%,99% {
-      opacity:1;
-   }
-}
+body {
+   padding:40px 0;
+   font-family: 'bebas', sans-serif;
+   background-color:#fff;
+   .textcontainer {padding:40px 0;text-align:center;}
+   .particletext {
+      text-align:center;
+      font-size:48px;
+      position: relative;
+   &.fire {
+         >.particle {
+            position: absolute;
+            background-color:rgba(255,193,7,0.5);
+            border-radius:40px;
+            border-top-right-radius:0px;
+            animation: fires 0.8s linear infinite;
+               transform:rotate(-45deg);
+            opacity:0;
+            &:before {
+               position: absolute;
+               content: '';
+               top:60%;
+               left:40%;
+               transform:translate(-50%,-50%);
+               width:50%;
+               height:50%;
+               border-radius:40px;
+               border-top-right-radius:0px;
+               background-color:rgba(251,140,0,0.5);
+            }
+         }
+      }
 	</style>
 	<div class="textcontainer">
-   <span class="particletext lines"><a href="https://barole.github.io/"><img src="/OfficialBarole.png" alt="Barole"></a>	
-	</header></span>
+   <span class="particletext lines">Test</span>
+</div></header>
 </div>
 	
 </html>
