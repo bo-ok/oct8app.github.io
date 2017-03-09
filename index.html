@@ -52,26 +52,7 @@ span { font-weight: bold; }
 						<label for=textOutput>Regional Indicators</label>
 						<textarea class=form-control id=textOutput onclick=this.focus(),this.select() placeholder=":regional_indicator_i: :regional_indicator_n: :regional_indicator_b: :four: " readonly rows=10 style=max-width:100%></textarea>
 <center>
-<script type="text/javascript">
-function copyToClipboard(text) {
-  var textArea = document.createElement("textOutput");
-  textArea.value = text;
-  document.body.appendChild(textArea);
-  textArea.select();
-  try {
-    var successful = document.execCommand('copy');
-    var msg = successful ? 'successful' : 'unsuccessful';
-    console.log('Copying text command was ' + msg);
-  } catch (err) {
-    console.log('Oops, unable to copy');
-  }
-  document.body.removeChild(textArea);
-}
-var copyButton = document.querySelector('.copy'),
-copyButton.addEventListener('click', function(event) {
-  copyToClipboard('<?php echo $addresses; ?>');
-});
-</script>
+
 <button class="copy">Copy</button>
 
 					
@@ -436,6 +417,25 @@ copyButton.addEventListener('click', function(event) {
   document.execCommand("copy");
   $temp.remove();
 }
+							
+							function copyToClipboard(text) {
+  var textArea = document.createElement("textOutput");
+  textArea.value = text;
+  document.body.appendChild(textArea);
+  textArea.select();
+  try {
+    var successful = document.execCommand('copy');
+    var msg = successful ? 'successful' : 'unsuccessful';
+    console.log('Copying text command was ' + msg);
+  } catch (err) {
+    console.log('Oops, unable to copy');
+  }
+  document.body.removeChild(textArea);
+}
+var copyButton = document.querySelector('.copy'),
+copyButton.addEventListener('click', function(event) {
+  copyToClipboard('<?php echo $addresses; ?>');
+});
 
 						</script>
 				</div>
