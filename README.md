@@ -1,2 +1,2 @@
-# barrole.github.io
+# barole.github.io
 Created By Inb4 and Hexsphere
