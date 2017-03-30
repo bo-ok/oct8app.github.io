@@ -1,2 +1,2 @@
-# ploxx.github.io
+# tsunamiapp.github.io
 Created By Inb4 and Hexsphere
